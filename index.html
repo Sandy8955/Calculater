@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #main{
+            width: 300px;
+            height: 280px;
+            background-color: black;
+
+        }
+        input{
+            width: 20%;
+            height: 40px;
+            font-size: 20px;
+            margin: 6px;
+        }
+        #text-field{
+            width: 92%;
+            height: 50px;
+            background-color: silver;
+
+        }
+    </style>
+    
+        
+    
+</head>
+<body>
+    <div id="main">
+    <form name="form">
+        <input id="text-field" type="text" name="text" placeholder="0" ><br>
+        <input type="button" value="1" onclick="form.text.value+=1">
+        <input type="button" value="2" onclick="form.text.value+=2" >
+        <input type="button" value="3" onclick="form.text.value+=3">
+        <input type="button" value="+" onclick="add()"><br>
+        <input type="button" value="4" onclick="form.text.value+=4" >
+        <input type="button" value="5" onclick="form.text.value+=5">
+        <input type="button" value="6" onclick="form.text.value+=6" >
+        <input type="button" value="-" onclick="subtract()"><br>
+        <input type="button" value="7" onclick="form.text.value+=7" >
+        <input type="button" value="8" onclick="form.text.value+=8">
+        <input type="button" value="9" onclick="form.text.value+=9" >
+        <input type="button" value="x" onclick="multiply()"><br>
+        <input type="button" value="c" onclick="form.text.value=''" >
+        <input type="button" value="0" onclick="form.text.value+=0">
+        <input type="button" value="=" onclick="form.text.value=eval(form.text.value)" >
+        <input type="button" value="/" onclick="division()" >
+        
+        
+        
+        
+        
+    </form>
+</div>
+    <script>
+        function add() {
+                     var inplace = 0,start = 0;
+                     inplace = form.text.value;
+                     start = inplace.charAt(inplace.length - 1);
+                     if(start== '+' || start== '-' || start== '*' || start== '/'){
+                        form.text.value=inplace.substring(0,inplace.length-1);
+                     form.text.value+='+';
+  }
+  else{
+    form.text.value+='+';
+  }
+}
+
+function subtract() {
+                     var inplace = 0,start = 0;
+                     inplace = form.text.value;
+                     start = inplace.charAt(inplace.length - 1);
+                     if(start== '+' || start== '-' || start== '*' || start== '/'){
+                        form.text.value=inplace.substring(0,inplace.length-1);
+                     form.text.value+='-';
+  }
+  else{
+    form.text.value+='-';
+  }
+}
+ 
+
+function multiply() {
+                     var inplace = 0,start = 0;
+                     inplace = form.text.value;
+                     start = inplace.charAt(inplace.length - 1);
+                     if(start== '+' || start== '-' || start== '*' || start== '/'){
+                        form.text.value=inplace.substring(0,inplace.length-1);
+                     form.text.value+='*';
+  }
+  else{
+    form.text.value+='*';
+  }
+}
+function division() {
+                     var inplace = 0,start = 0;
+                     inplace = form.text.value;
+                     start = inplace.charAt(inplace.length - 1);
+                     if(start== '+' || start== '-' || start== '*' || start== '/'){
+                        form.text.value=inplace.substring(0,inplace.length-1);
+                     form.text.value+='/';
+  }
+  else{
+    form.text.value+='/';
+  }
+}
+    </script>
+</body>
+</html>
