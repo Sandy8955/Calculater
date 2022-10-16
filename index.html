@@ -24,6 +24,12 @@
             background-color: silver;
 
         }
+        body{
+          min-height: 100vh;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+        }
     </style>
     
         
@@ -31,7 +37,7 @@
 </head>
 <body>
     <div id="main">
-    <form name="form">
+    <form class="cal" name="form">
         <input id="text-field" type="text" name="text" placeholder="0" ><br>
         <input type="button" value="1" onclick="form.text.value+=1">
         <input type="button" value="2" onclick="form.text.value+=2" >
